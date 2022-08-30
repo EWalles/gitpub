@@ -4,28 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Git Pub</title>
+    <title>Welcome to GitPub</title>
 </head>
 <body>
-    
     <style type="text/css">
-         body 
-        {
-            color: blanchedalmond;
-            background-color: steelblue;
-        }
-  </style>
-
-    <h1>At foo Bar</h1>
-    <h2>
-        <ul>
-            <li>
-                <%= drinks.name %>
-            </li>
-        </ul>
-
-    <a href="/drinks">Back to Index</a>
-    </h2>
-    
+        body 
+       {
+           color: blanchedalmond;
+           background-color: steelblue;
+       }
+ </style>
+    <h1>At foo bar</h1>
+    <h2>{{drink.name | capitalize }}</h2>
+    <h2><img src="{{drink.image}}.png"></h2>
+    <h2>{{drink.price}}</h2>
+    <a herf="/drinks">Back to Home Page</a>
 </body>
 </html>
