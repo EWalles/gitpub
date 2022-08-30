@@ -4,6 +4,10 @@ const port = 3000
 const drinks = require('./models/drinks.js')
 
 
+app.get('/', (req, res) => {
+    reqLog(req)
+    res.send('Welcome to the Gitpub App!')
+})
 
 // INDEX route for drinks 
 app.get('/drinks', (req, res) => {
@@ -14,7 +18,7 @@ app.get('/drinks', (req, res) => {
 // SHOW route for drinks 
 
 app.get('drinks/:id', (req, res) => {
-    res.render('show', {drink: drinks[req.pasrams.id]})
+    res.render('show', {drink: drinks[req.params.id]})
 })
 
 app.listen(port, () => {
