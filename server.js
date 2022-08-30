@@ -9,7 +9,7 @@ const welcome = ["Welcome to Gitpub"]
 const drinks = require("./models/drinks.js") 
 
 app.get("/welcome", (req, res) => {
-    res.send(welcome)
+    res.render("drinks_show.ejs")
   })
 app.listen(port, () => {
   console.log("listening")
