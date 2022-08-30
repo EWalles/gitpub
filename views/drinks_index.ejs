@@ -7,17 +7,13 @@
     <title>Welcome to GitPub</title>
 </head>
 <body>
-    <style type="text/css">
-        body 
-       {
-           color: blanchedalmond;
-           background-color: steelblue;
-       }
- </style>
-    <h1>At foo bar</h1>
-    <h2>{{drink.name | capitalize }}</h2>
-    <h2><img src="{{drink.image}}.png"></h2>
-    <h2>{{drink.price}}</h2>
-    <a herf="/drinks">Back to Home Page</a>
+    <h1>Welcome to GitPub</h1>
+    <ul>
+        {% for drink in drinks %}
+        <li>
+            <a href="/drinks/{{ forloop.index0 }}">{{drink.name | capitalize }}</a>
+        </li>
+        {% endfor %}
+    </ul>
 </body>
 </html>
