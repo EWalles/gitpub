@@ -11,8 +11,13 @@ app.get("/", (req, res) => {
     res.render("welcome")
 })
 
-app.get("/drinks", (req, res) => {
-    res.render("drinks_index.ejs")
+app.get("/drinks/", (request, response) => {
+  response.render("drinks_index.ejs", {
+    allDrinks: drinks,
+  })
+})
+  app.get("/drinks/:id", (req, res) => {
+    res.render("drinks_show.ejs")
   })
 
 app.listen(port, () => {
