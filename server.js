@@ -1,15 +1,14 @@
 //require dependencies
 const express = require('express');
-const ejs = require('ejs')
 const app = express();
-
-const port = 3000
 const drinks = require('./models/drinks.js')
+const port = 3000
+
 
 
 app.get('/', (req, res) => {
-    reqLog(req)
-    res.send('Welcome to the Gitpub App!')
+ 
+    res.render('Welcome to the Gitpub App!')
 })
 
 // INDEX route for drinks 
