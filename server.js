@@ -1,5 +1,8 @@
-const express = require('express')
-const app = express()
+//require dependencies
+const express = require('express');
+const ejs = require('ejs')
+const app = express();
+
 const port = 3000
 const drinks = require('./models/drinks.js')
 
