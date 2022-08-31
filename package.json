@@ -12,5 +12,14 @@
   "dependencies": {
     "ejs": "^3.1.8",
     "express": "^4.18.1"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EWalles/gitpub.git"
+  },
+  "bugs": {
+    "url": "https://github.com/EWalles/gitpub/issues"
+  },
+  "homepage": "https://github.com/EWalles/gitpub#readme"
 }
