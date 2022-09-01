@@ -1,27 +1,38 @@
-//require dependencies
-const express = require('express');
+const express = require("express");
+const drinks = require("./models/drinks");
+const foods = require("./models/food");
 const app = express();
-var drinks = require('./models/drinks.js');
 const port = 3000;
 
-//
-app.get('/', (req, res) => {
-    res.render('drinks_show.ejs')
-});
-
-// INDEX route for drinks 
-app.get('/drinks/', (req, res) => {
-    // res.send(drinks)
-    res.render('index', {allDrinks: drinks})
-    
-});
-
-// SHOW route for drinks 
-
-app.get('drinks/:drinks.js', (req, res) => {
-    res.render('show', {drinks: drinks[req.params.drinks]})
-});
-
+// listen to port and console log to check if its running
 app.listen(port, () => {
-    console.log('server is running ', port)
+    console.log("I can hear server running")
 });
+
+app.get("/", (req, res) => {
+    res.send("Welcome to the Gitpub App!")
+})
+
+app.get("/drinks", (req, res) => {
+    res.render("drinks_index.ejs", {
+        allDrinks: drinks,
+    })
+})
+
+app.get("/drinks/:id", (req, res) => {
+    res.render("drinks_show.ejs", {
+        drink: drinks[req.params.id]
+    })
+})
+
+app.get("/foods", (req, res) => {
+    res.render("food_index.ejs", {
+        allFoods: foods,
+    })
+})
+
+app.get("/foods/:id", (req, res) =>{
+    res.render("food_show.ejs", {
+        food: foods[req.params.id],
+    })
+})

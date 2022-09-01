@@ -4,25 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to GitPub</title>
+    <title>Foods</title>
 </head>
 <body>
-    <style type="text/css">
-        body 
-       {
-           color: blanchedalmond;
-           background-color: steelblue;
-       }
- </style>
-<h1>To foo Bar</h1>
-<h2>
+    <h1>Welcome to gitPub!</h1>
+    <h2>Food Menu</h2>
     <ul>
-        <li>
-          <a href="/drinks"> </a>
-        </li>
+        <% for(let i =0; i< allFoods.length; i++) { 
+            %>
+            <li>
+                <a href="/foods/<%=i%>"><%=allFoods[i].name[0].toUpperCase() + allFoods[i].name.slice(1, allFoods[i].name.length)%></a>
+            </li>
+        <% } %>
     </ul>
-</h2>
-    <a herf="/drinks">Back to Home Page</a>
-  
+
+    <a href="<%=/drinks/%>">Drinks Menu</a>
+    <style>
+        body {
+            color: blanchedalmond;
+            background-color: steelblue;
+        }
+    </style>
 </body>
 </html>
