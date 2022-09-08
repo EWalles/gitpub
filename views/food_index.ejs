@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Names</title>
+
+    <style type="text/css">
+        body {
+            color: blanchedalmond;
+            background-color: steelblue;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Food!</h1>
+    <ul>
+        <% for (i=0; i < allFoods.length; i++) { %>
+            <li>
+                <a href="/foods/<%= [i] %>">
+                    <%= allFoods[i].name[0].toUpperCase() + allFoods[i].name.slice(1, allFoods[i].name.length) %>
+                </a>
+            </li>
+            <% } %>
+    </ul>
+    <a href=" <%= /drinks/ %>">Drink Menu</a>
+</body>
+
+</html>
