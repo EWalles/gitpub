@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Drink Names</title>
+    <title>Food Names</title>
     <style type="text/css">
         body {
             color: blanchedalmond;
@@ -17,12 +17,12 @@
 <body>
     <h1>At the Foo Bar!</h1>
     <h2>
-        <%= drinkInfo.name[0].toUpperCase() + drinkInfo.name.slice(1, drinkInfo.name.length) %>
+        <%= foodInfo.name[0].toUpperCase() + foodInfo.name.slice(1, foodInfo.name.length) %>
     </h2>
-    <img src="<%= drinkInfo.image%>.jpg">
-    <h3>Price: $<%= drinkInfo.price %></h3>
+    <img src="<%= foodInfo.image%>">
+    <h3>Price: $<%= foodInfo.price %></h3>
     <p>
-        <a href="<%= /drinks/ %>">Back to Home</a>
+        <a href="<%= /foods/ %>">Back to Home</a>
     </p>
 
 
